@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonOnClick : MonoBehaviour
 {
+    //public InputField playerNameInput;
+    
     public void ReplayLv1()
     {
         SceneManager.LoadScene("Lev1Scene");
@@ -23,7 +25,8 @@ public class ButtonOnClick : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Lev1Scene");
+        //PlayerPrefs.SetString("PlayerName", playerNameInput.text);
+        SceneManager.LoadScene("LevSelecScene");
     }
 
     public void Tutorial()
@@ -36,4 +39,28 @@ public class ButtonOnClick : MonoBehaviour
         SceneManager.LoadScene("SelectScene");
     }
 
+    public void Ranking()
+    {
+        SceneManager.LoadScene("RankingScene");
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene("Lev1Scene");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Lev2Scene");
+    }
+    
+    public void Level3()
+    {
+        SceneManager.LoadScene("Lev3Scene");
+    }
+
+    public void NameInputButton()
+    {
+        SceneManager.LoadScene("LevSelecScene");
+    }
 }

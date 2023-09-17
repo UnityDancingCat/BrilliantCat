@@ -1301,7 +1301,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 868611170}
         m_TargetAssemblyTypeName: ButtonOnClick, Assembly-CSharp
-        m_MethodName: ReplayLv1
+        m_MethodName: Ranking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5613,7 +5613,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 868611170}
         m_TargetAssemblyTypeName: ButtonOnClick, Assembly-CSharp
-        m_MethodName: ReplayLv1
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5961,12 +5961,13 @@ MonoBehaviour:
   outlineDistance: {x: 0, y: 0}
   moveInterval: 7
   positions: []
-  currentPositionIndex: 
-  tutorialPositon: 
+  t: 
+  tutorial1Positon: 
+  tutorial2Positon: 
   lev1Position: 
   lev2Position: 
-  lev3Position: 
   lev4Position: 
+  tutorialDialogNum: 0
 --- !u!114 &1774918567
 MonoBehaviour:
   m_ObjectHideFlags: 0

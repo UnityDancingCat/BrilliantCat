@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lev3Scene.unity
     guid: 0f02f5e1e54a6c344b959dad63c9e872
+  - enabled: 1
+    path: Assets/Scenes/RankingScene.unity
+    guid: 80facf03b59ccc64e8f23c8a23935445
+  - enabled: 1
+    path: Assets/Scenes/LevSelecScene.unity
+    guid: 909f0a2707a03e540b82bb90ed4f9ffb
   m_configObjects: {}

@@ -597,6 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9864e6f7eba084089942cf8d789817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreData: []
 --- !u!114 &84461436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,13 +614,11 @@ MonoBehaviour:
   outlineDistance: {x: 0, y: 0}
   moveInterval: 6
   positions: []
-  currentPositionIndex: 
   t: 
   tutorial1Positon: 
   tutorial2Positon: 
   lev1Position: 
   lev2Position: 
-  lev3Position: 
   lev4Position: 
   tutorialDialogNum: 0
 --- !u!114 &84461437

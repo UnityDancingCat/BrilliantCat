@@ -3920,12 +3920,13 @@ MonoBehaviour:
   outlineDistance: {x: 0, y: 0}
   moveInterval: 6
   positions: []
-  currentPositionIndex: 
-  tutorialPositon: 
+  t: 
+  tutorial1Positon: 
+  tutorial2Positon: 
   lev1Position: 
   lev2Position: 
-  lev3Position: 
   lev4Position: 
+  tutorialDialogNum: 0
 --- !u!114 &1774918567
 MonoBehaviour:
   m_ObjectHideFlags: 0
