@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         if (gameEnd == true)
         {
             // UnityEngine.Debug.Log("score: " + score + ", gameEnd: " + gameEnd);
-            if (score < 100)
+            if (score > 100)
             {
                 SceneManager.LoadScene("FailScene", LoadSceneMode.Single);
             }

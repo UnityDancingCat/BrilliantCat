@@ -7,7 +7,7 @@ using static Score;
 
 public class FinalScore : MonoBehaviour
 {
-    public Text CatText;
+    public static Text CatText;
 
     public int ScoreF;
     //public static Score instance;
