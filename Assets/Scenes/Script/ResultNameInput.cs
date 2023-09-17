@@ -13,10 +13,10 @@ public class ResultNameInput : MonoBehaviour
 
     private void Start()
     {
-        // FinalScore 스크립트를 가진 GameObject를 찾습니다.
+        // FinalScore 스크립트를 가진 GameObject
         GameObject finalScoreObject = GameObject.Find("YourFinalScoreObjectName");
 
-        // FinalScore 스크립트가 있는 경우 ScoreF 변수를 가져옵니다.
+        // FinalScore 스크립트가 있는 경우 ScoreF 변수를 가져옴
         if (finalScoreObject != null)
         {
             FinalScore finalScoreScript = finalScoreObject.GetComponent<FinalScore>();

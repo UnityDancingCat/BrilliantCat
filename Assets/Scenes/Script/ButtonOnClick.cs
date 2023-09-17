@@ -58,4 +58,9 @@ public class ButtonOnClick : MonoBehaviour
     {
         SceneManager.LoadScene("Lev3Scene");
     }
+
+    public void NameInputButton()
+    {
+        SceneManager.LoadScene("LevSelecScene");
+    }
 }
