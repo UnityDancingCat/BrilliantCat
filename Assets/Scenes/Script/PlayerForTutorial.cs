@@ -33,7 +33,8 @@ public class PlayerForTutorial : MonoBehaviour
     int wave;
     List<int> stimList = new List<int>() {5};
 
-    public static bool gameEnd;
+    public static bool gameEnd = false;
+    public static bool playGame = true;
 
     private void Awake()
     {
@@ -54,6 +55,9 @@ public class PlayerForTutorial : MonoBehaviour
 
         timer = 0.0f;
         watingTime = 6;
+
+        gameEnd = false;
+        playGame = true;
     }
 
     public static DataSet OnSelectRequest(string query, string tableName)
@@ -122,6 +126,7 @@ public class PlayerForTutorial : MonoBehaviour
         {
             if (timer > watingTime)
             {
+                playGame = false;
                 string query = "select class from predictedClass ORDER BY timestamp DESC LIMIT 1";
                 DataSet ds = OnSelectRequest(query, "predictedClass");
 

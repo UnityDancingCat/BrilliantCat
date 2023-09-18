@@ -103,11 +103,11 @@ public class SquareImageWithOutlineForTutorialBlue : MonoBehaviour
 
         positions = new Vector3[]
         {
-            new Vector3(0f, -384f, 0f),
-            new Vector3(-753f, 0f, 0f),
-            new Vector3(0f, 384f, 0f),
-            new Vector3(753f, 0f, 0f),
-            new Vector3(1000f, 1000f, 0f)
+            new Vector3(0f, -33f, 0f),
+            new Vector3(-55f, 0f, 0f),
+            new Vector3(0f, 33f, 0f),
+            new Vector3(55f, 0f, 0f),
+            new Vector3(100f, 100f, 0f)
         };
 
         SelectTutorial();
