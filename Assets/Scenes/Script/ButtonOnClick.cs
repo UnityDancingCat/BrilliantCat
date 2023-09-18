@@ -4,14 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+using static SquareImageWithOutline;
+
 public class ButtonOnClick : MonoBehaviour
 {
     //public InputField playerNameInput;
     public GameObject obj;
+    public string SceneName;
     
-    public void ReplayLv1()
+    public void Replay()
     {
-        SceneManager.LoadScene("Lev1Scene");
+        SceneName = SquareImageWithOutline.sceneName;
+        if (SceneName == "Lev1Scene")
+        {
+            SceneManager.LoadScene("Lev1Scene");
+        }
+        else if (SceneName == "Lev2Scene")
+        {
+            SceneManager.LoadScene("Lev2Scene");
+        }
+        else if (SceneName == "Lev3Scene")
+        {
+            SceneManager.LoadScene("Lev3Scene");
+        }
     }
 
     public void Quit() //게임 레벨 선택 씬
