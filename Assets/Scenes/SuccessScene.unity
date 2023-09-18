@@ -6649,12 +6649,12 @@ MonoBehaviour:
   RName1: {fileID: 457316437}
   RName2: {fileID: 717747088}
   RName3: {fileID: 1819888353}
-  RNameCur: {fileID: 0}
+  RName4: {fileID: 923627360}
   RScore1: {fileID: 692417414}
   RScore2: {fileID: 1374448438}
   RScore3: {fileID: 1275525847}
-  RScoreCur: {fileID: 0}
-  RankCur: {fileID: 0}
+  RScore4: {fileID: 1089214078}
+  RankCur: {fileID: 1966251444}
   NameDB: []
   ScoreCur: 0
   ScoreDB: 

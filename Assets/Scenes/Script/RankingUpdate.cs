@@ -14,8 +14,8 @@ using static SquareImageWithOutline;
 
 public class RankingUpdate : MonoBehaviour
 {
-    public TextMeshProUGUI RName1, RName2, RName3, RNameCur;
-    public TextMeshProUGUI RScore1, RScore2, RScore3, RScoreCur;
+    public TextMeshProUGUI RName1, RName2, RName3, RName4;
+    public TextMeshProUGUI RScore1, RScore2, RScore3, RScore4;
     public TextMeshProUGUI RankCur;
 
     //public string Name1, Name2, Name3;
@@ -80,6 +80,32 @@ public class RankingUpdate : MonoBehaviour
         }
     }
 
+    public static int OnCountRequest(string query, string tableName)
+    {
+        int myRank = 0;
+        try
+        {
+            SqlConn.Open();
+            UnityEngine.Debug.Log("sql connect");
+
+            MySqlCommand cmd = new MySqlCommand(query, SqlConn);
+            // cmd.Connection = SqlConn;
+            // cmd.CommandText = query;
+
+            myRank = int.Parse(cmd.ExecuteScalar().ToString());
+
+            SqlConn.Close();
+
+            return myRank;
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.Log("OnCountRequest: On client connect exception" + e);
+
+            return -1;
+        }
+    }
+
     void select()
     {
         SceneName = SquareImageWithOutline.sceneName;
@@ -96,7 +122,7 @@ public class RankingUpdate : MonoBehaviour
         {
             lev = 3;
         }
-        else {lev = 0;}
+        else {lev = 1;}
 
         // string query1 = string.Format("select user_name, score from ranking where level = {0} ORDER BY score DESC LIMIT 3", lev);
         string query1 = string.Format("select user_name, score from ranking ORDER BY score DESC LIMIT 3");
@@ -117,17 +143,32 @@ public class RankingUpdate : MonoBehaviour
             }
     }
 
+    int MyRanking(int lev, int scoreCur)
+    {
+        string query_rank = string.Format("SELECT COUNT(*) + 1 FROM ranking WHERE level = {0} AND score >= {1}", lev, scoreCur);
+        UnityEngine.Debug.Log(query_rank);
+        int myRank = OnCountRequest(query_rank, "ranking");
+
+        return myRank;
+    }
+
     void Start()
     {
         select();
-        ScoreCur = Score.CatScore;
+        // ScoreCur = Score.CatScore;
+        ScoreCur = 77;
+
+        NameDB.Add(NameCur);
+        ScoreDB.Add(ScoreCur);
 
         for (int i = 0; i < 3; i++)
         {
+            // UnityEngine.Debug.Log(ScoreDB[i]);
             if (ScoreCur > ScoreDB[i])
             {
                 ScoreDB.Insert(i, ScoreCur);
                 NameDB.Insert(i, NameCur);
+                break;
             }
         }
 
@@ -138,10 +179,21 @@ public class RankingUpdate : MonoBehaviour
         RScore2.text = ScoreDB[1].ToString();
         RScore3.text = ScoreDB[2].ToString();
 
-        int idx = NameDB.FindIndex(n => n.Contains("You!"));
+        int idx = NameDB.FindIndex(n => n.Contains(NameCur));
         UnityEngine.Debug.Log(idx);
 
-        
+        if (idx == 3)
+        {
+            int myFRank = MyRanking(lev, ScoreCur);
+            RankCur.text = myFRank.ToString();
+            RName4.text = NameDB[3];
+            RScore4.text = ScoreDB[3].ToString();
+            UnityEngine.Debug.Log("my rank is .. " + myFRank);
+        }
+        else
+        {
+            UnityEngine.Debug.Log("my rank is ..");
+        }
 
     }
 
