@@ -60,10 +60,10 @@ public class SquareImageWithOutline : MonoBehaviour
 
         positions = new Vector3[]
         {
-            new Vector3(0f, -33f, 0f),
-            new Vector3(-55f, 0f, 0f),
-            new Vector3(0f, 33f, 0f),
-            new Vector3(55f, 0f, 0f),
+            new Vector3(0f, -70f, 0f),
+            new Vector3(-140f, 0f, 0f),
+            new Vector3(0f, 70f, 0f),
+            new Vector3(140f, 0f, 0f),
             new Vector3(100f, 100f, 0f)
         };
 
