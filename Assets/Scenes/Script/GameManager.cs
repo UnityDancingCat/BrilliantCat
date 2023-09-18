@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         if ((gameEnd == true) && (playGame == false))
         {
             // UnityEngine.Debug.Log("score: " + score + ", gameEnd: " + gameEnd);
-            if (score < 100)
+            if (score < 50)
             {
                 SceneManager.LoadScene("FailScene", LoadSceneMode.Single);
             }
@@ -44,40 +44,5 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("SuccessScene", LoadSceneMode.Single);
             }
         }
-        //사용자 점수를 PlayerPrefs에 저장
-        //PlayerPrefs.SetFloat("PlayerScore", playerScore);
-        //SceneManager.LoadScene(nextScene);
-        
     }
-
-    // public void Save()
-    // {
-    //     int score = Score.CatScore;
-    //     if (score < PlayerPrefs.GetInt("BestScore")) {
-    //         if (score < PlayerPrefs.GetInt("SecondScore"))
-    //         {
-    //             if (score < PlayerPrefs.GetInt("ThirdScore"))
-    //                 return;
-    //             //3등일 때
-    //             PlayerPrefs.SetInt("ThirdScore", score);
-    //             return;
-    //         }
-    //         //2등일 때
-    //         PlayerPrefs.SetInt("ThirdScore", PlayerPrefs.GetInt("SecondScore"));
-    //         PlayerPrefs.SetInt("SecondScore", score);
-    //         return;
-    //     }
-    //     //1등일 때
-    //     if (score == PlayerPrefs.GetInt("BestScore")) return;
-    //     PlayerPrefs.SetInt("ThirdScore", PlayerPrefs.GetInt("SecondScore"));
-    //     PlayerPrefs.SetInt("SecondScore", PlayerPrefs.GetInt("BestScore"));
-    //     PlayerPrefs.SetInt("BestScore", score);
-    // }
-
-    // private void Load()
-    // {
-    //     scoreData[0].text = PlayerPrefs.GetInt("BestScore").ToString() + "점";
-    //     scoreData[1].text = PlayerPrefs.GetInt("SecondScore").ToString() + "점";
-    //     scoreData[2].text = PlayerPrefs.GetInt("ThirdScore").ToString() + "점";
-    // }
 }
