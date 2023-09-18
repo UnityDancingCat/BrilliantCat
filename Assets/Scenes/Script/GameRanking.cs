@@ -64,28 +64,28 @@ public class GameRanking : MonoBehaviour
 
     private void UpdateRanking()
     {
-        // 현재 플레이어의 이름과 점수를 UI에 표시합니다.
-        RankNameCurrent.text = PlayerPrefs.GetString("CurrentPlayerName");
-        RankScoreCurrent.text = string.Format("{0:N3}cm", PlayerPrefs.GetFloat("CurrentPlayerScore"));
+        // // 현재 플레이어의 이름과 점수를 UI에 표시합니다.
+        // RankNameCurrent.text = PlayerPrefs.GetString("CurrentPlayerName");
+        // RankScoreCurrent.text = string.Format("{0:N3}cm", PlayerPrefs.GetFloat("CurrentPlayerScore"));
 
-        // 랭킹 순위별로 UI를 업데이트합니다.
-        for (int i = 0; i < 5; i++)
-        {
-            RankScoreText[i].text = string.Format("{0:N3}cm", bestScore[i]);
-            RankNameText[i].text = bestName[i];
+        // // 랭킹 순위별로 UI를 업데이트합니다.
+        // for (int i = 0; i < 5; i++)
+        // {
+        //     RankScoreText[i].text = string.Format("{0:N3}cm", bestScore[i]);
+        //     RankNameText[i].text = bestName[i];
 
-            // 현재 플레이어와 같은 순위에 노란색 표시를 추가합니다.
-            if (RankScoreCurrent.text == RankScoreText[i].text)
-            {
-                RankScoreText[i].color = Color.yellow;
-                RankNameText[i].color = Color.yellow;
-            }
-            else
-            {
-                RankScoreText[i].color = Color.white;
-                RankNameText[i].color = Color.white;
-            }
-        }
+        //     // 현재 플레이어와 같은 순위에 노란색 표시를 추가합니다.
+        //     if (RankScoreCurrent.text == RankScoreText[i].text)
+        //     {
+        //         RankScoreText[i].color = Color.yellow;
+        //         RankNameText[i].color = Color.yellow;
+        //     }
+        //     else
+        //     {
+        //         RankScoreText[i].color = Color.white;
+        //         RankNameText[i].color = Color.white;
+        //     }
+        // }
     }
 }
 

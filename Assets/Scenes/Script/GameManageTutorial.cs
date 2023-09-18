@@ -22,7 +22,7 @@ public class GameManageTutorial : MonoBehaviour
         {
             SceneManager.LoadScene("FailScene");
         } */
-        int score = Score.CatScore;
+        int score = Score.curScore;
         bool gameEnd = Player.gameEnd;
 
         if (gameEnd == true)

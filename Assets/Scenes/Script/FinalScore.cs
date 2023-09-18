@@ -19,7 +19,7 @@ public class FinalScore : MonoBehaviour
     
     void Start()
     {
-        ScoreF = Score.CatScore;
+        ScoreF = Score.curScore;
     }
 
     public void Update()

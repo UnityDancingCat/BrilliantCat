@@ -52,11 +52,11 @@ public class SquareImageWithOutline : MonoBehaviour
         // currentPositionIndex = new List<int>() {4, 0, 4, 1, 4, 1, 4, 1, 4, 2, 4, 3, 4, 0, 4, 3, 4, 1, 4, 2, 4, 0, 4, 3, 4};
         tutorial1Positon = new List<int>() {1, 1, 99};
         tutorial2Positon = new List<int>() {1, 3, 2, 99};
-        lev1Position = new List<int>() {0, 1, 3, 99}; //1, 2, 2, 3, 0, 1, 3, 0, 1, 0, 1, 2, 3, 0, 1, 2, 2, 3, 3, 0, 1, 2,
-        lev2Position = new List<int>() {1, 2, 3, 0, 2, 3, 0, 1, 2, 3, 1, 2, 1, 2, 3, 0, 3, 0, 2, 3, 0, 1, 2, 3, 0, 99};
+        // lev1Position = new List<int>() {1, 99}; //1, 2, 2, 3, 0, 1, 3, 0, 1, 0, 1, 2, 3, 0, 1, 2, 2, 3, 3, 0, 1, 2,
+        lev1Position = new List<int>() {0, 2, 2, 1, 1, 3, 3, 99}; //1, 2, 2, 3, 0, 1, 3, 0, 1, 0, 1, 2, 3, 0, 1, 2, 2, 3, 3, 0, 1, 2,
+        lev2Position = new List<int>() {1, 2, 3, 0, 3, 0, 2, 3, 99};
         //lev3Position = new List<int>() {1, 2, 3, 4, 2, 3, 4, 1, 2, 3, 1, 2, 1, 2, 3, 4, 3, 4, 2, 3, 4, 1, 2, 3, 4, 99};
-        lev3Position = new List<int>() {3, 1, 2, 0, 3, 1, 2, 0, 3, 1, 2, 0, 3, 1, 2, 0, 3, 1, 2, 0, 3, 1, 2, 0, 99};
-        lev4Position = new List<int>() {1, 2, 3, 4, 2, 3, 4, 1, 2, 3, 1, 2, 1, 2, 3, 4, 3, 4, 2, 3, 4, 1, 2, 3, 4, 99};
+        lev3Position = new List<int>() {3, 1, 2, 0, 2, 0, 3, 1, 99};
 
         positions = new Vector3[]
         {
@@ -71,11 +71,6 @@ public class SquareImageWithOutline : MonoBehaviour
 
         // StartCoroutine(MoveOutline());
         SelectScene();
-    }
-
-    public void Update()
-    {
-        
     }
 
     public void SelectScene()
@@ -190,6 +185,12 @@ public class SquareImageWithOutline : MonoBehaviour
     {
         for(int i=0; i < lev2Position.Count; i++)
         {
+            if (lev2Position[i] == 99)
+            {
+                UnityEngine.Debug.Log("Lev2Positon: " + lev2Position[i]);
+                currentPosition = lev2Position[i];
+                break;
+            } 
             yield return new WaitForSeconds(moveInterval);
             currentPosition = lev2Position[i];            
             Vector3 targetPosition = positions[currentPosition];
@@ -209,27 +210,14 @@ public class SquareImageWithOutline : MonoBehaviour
     {
         for(int i=0; i < lev3Position.Count; i++)
         {
+            if (lev3Position[i] == 99)
+            {
+                UnityEngine.Debug.Log("Lev2Positon: " + lev3Position[i]);
+                currentPosition = lev3Position[i];
+                break;
+            } 
             yield return new WaitForSeconds(moveInterval);
             currentPosition = lev3Position[i];            
-            Vector3 targetPosition = positions[currentPosition];
-
-            // Move the outline to the target position
-            rectTransform.anchoredPosition = targetPosition;
-
-            yield return new WaitForSeconds(moveInterval);
-
-            currentPosition = 4;
-            rectTransform.anchoredPosition = positions[currentPosition];
-            
-        };
-    }
-
-    private IEnumerator MoveOutlineLev4()
-    {
-        for(int i=0; i < lev4Position.Count; i++)
-        {
-            yield return new WaitForSeconds(moveInterval);
-            currentPosition = lev4Position[i];            
             Vector3 targetPosition = positions[currentPosition];
 
             // Move the outline to the target position

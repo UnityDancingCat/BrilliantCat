@@ -12,6 +12,7 @@ public class ObjectActivate : MonoBehaviour
     public GameObject StimBox3;
     public GameObject StimBox4;
     public GameObject StimBoxOutline;
+    public GameObject StimBoxOutlineBlue;
     public GameObject DialBox;
     public GameObject DialCat;
     public bool end;
@@ -70,6 +71,7 @@ public class ObjectActivate : MonoBehaviour
                 StimBox3.SetActive(true);
                 StimBox4.SetActive(true);
                 StimBoxOutline.SetActive(true);
+                StimBoxOutlineBlue.SetActive(true);
                 // UnityEngine.Debug.Log("stimBox active");
             }
 
@@ -82,6 +84,7 @@ public class ObjectActivate : MonoBehaviour
                 StimBox3.SetActive(false);
                 StimBox4.SetActive(false);
                 StimBoxOutline.SetActive(false);
+                StimBoxOutlineBlue.SetActive(false);
                 // UnityEngine.Debug.Log("stimBox inactive");
             }
         }
@@ -96,6 +99,7 @@ public class ObjectActivate : MonoBehaviour
         StimBox3.SetActive(false);
         StimBox4.SetActive(false);
         StimBoxOutline.SetActive(false);
+        StimBoxOutlineBlue.SetActive(false);
     }
 
     void Update()

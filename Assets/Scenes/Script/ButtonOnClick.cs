@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ButtonOnClick : MonoBehaviour
 {
     //public InputField playerNameInput;
+    public GameObject obj;
     
     public void ReplayLv1()
     {
@@ -62,5 +63,9 @@ public class ButtonOnClick : MonoBehaviour
     public void NameInputButton()
     {
         SceneManager.LoadScene("LevSelecScene");
+    }
+
+    public void SaveButton()
+    {
     }
 }

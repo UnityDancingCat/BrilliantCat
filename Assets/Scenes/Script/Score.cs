@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //Text
+using TMPro;
 
 public class Score : MonoBehaviour
 {
-    public Text CatText;
+    public TextMeshProUGUI CurScore;
 
-    public static int CatScore;
+    public static int curScore;
     //public static Score instance;
 
     // void Awake()
@@ -17,12 +18,12 @@ public class Score : MonoBehaviour
     
     void Start()
     {
-        CatScore = 0;
+        curScore = 0;
         //FixedUpdateScore();
     }
 
     public void Update()
     {
-        CatText.text = "Score : " + CatScore;
+        CurScore.text = "Score : " + curScore;
     }
 }
