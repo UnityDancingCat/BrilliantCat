@@ -19,6 +19,8 @@ public class SquareImageWithOutline : MonoBehaviour
     public Vector3[] positions;
     public static int currentPosition;
 
+    public static string sceneName;
+
     private List<int> currentPositionIndex;
     public List<int> t;
     public List<int> tutorial1Positon;
@@ -79,7 +81,7 @@ public class SquareImageWithOutline : MonoBehaviour
     public void SelectScene()
     {
         Scene scene = SceneManager.GetActiveScene();
-        string sceneName = scene.name;
+        sceneName = scene.name;
         UnityEngine.Debug.Log("Scene Name: " + sceneName);
 
         if (sceneName == "TutorialScene")
