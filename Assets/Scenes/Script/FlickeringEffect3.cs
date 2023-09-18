@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FlickeringEffect3 : MonoBehaviour
 {
+    // 오른쪽: 10Hz
     private bool isFlickering = false;
     private Image image;
     private Color originalColor;
@@ -56,10 +57,10 @@ public class FlickeringEffect3 : MonoBehaviour
         {
             //오브젝트 비활성화
             image.color = Color.clear;
-            yield return new WaitForSeconds(0.08f);
+            yield return new WaitForSeconds(0.1f);
             //오브젝트 활성화
             image.color = originalColor;
-            yield return new WaitForSeconds(0.08f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

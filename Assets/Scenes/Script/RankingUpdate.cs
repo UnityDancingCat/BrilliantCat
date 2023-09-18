@@ -125,7 +125,7 @@ public class RankingUpdate : MonoBehaviour
         else {lev = 1;}
 
         // string query1 = string.Format("select user_name, score from ranking where level = {0} ORDER BY score DESC LIMIT 3", lev);
-        string query1 = string.Format("select user_name, score from ranking ORDER BY score DESC LIMIT 3");
+        string query1 = string.Format("select user_name, score from ranking where level = {0} ORDER BY score DESC LIMIT 3", lev);
         DataSet ds = OnSelectRequest(query1, "ranking");
 
         int i = 0;
