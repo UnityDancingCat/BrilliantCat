@@ -156,7 +156,7 @@ public class RankingUpdate : MonoBehaviour
     {
         select();
         // ScoreCur = Score.CatScore;
-        ScoreCur = 77;
+        ScoreCur = 0;
 
         NameDB.Add(NameCur);
         ScoreDB.Add(ScoreCur);

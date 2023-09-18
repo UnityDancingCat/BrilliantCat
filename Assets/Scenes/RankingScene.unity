@@ -6100,22 +6100,17 @@ MonoBehaviour:
   RName2: {fileID: 1549187032}
   RName3: {fileID: 955563300}
   RName4: {fileID: 685589500}
-  RName5: {fileID: 596318238}
   RScore1: {fileID: 480606721}
   RScore2: {fileID: 1183706325}
   RScore3: {fileID: 55784024}
   RScore4: {fileID: 482667295}
-  RScore5: {fileID: 1717194491}
-  Name1: 
-  Name2: 
-  Name3: 
-  Name4: 
-  Name5: 
-  Score1: 0
-  Score2: 0
-  Score3: 0
-  Score4: 0
-  Score5: 0
+  RankCur: {fileID: 0}
+  NameDB: []
+  ScoreCur: 0
+  ScoreDB: 
+  RankCurrent: 0
+  SceneName: 
+  lev: 0
 --- !u!1001 &1785754335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7226,7 +7221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2085157648
 RectTransform:
   m_ObjectHideFlags: 0
