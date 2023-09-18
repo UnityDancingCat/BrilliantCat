@@ -33,7 +33,8 @@ public class Player : MonoBehaviour
     int wave;
     List<int> stimList = new List<int>() {5};
 
-    public static bool gameEnd;
+    public static bool gameEnd = false;
+    public static bool playGame;
 
     private void Awake()
     {
@@ -54,6 +55,9 @@ public class Player : MonoBehaviour
 
         timer = 0.0f;
         watingTime = 6;
+        
+        gameEnd = false;
+        playGame = true;
     }
 
     public static DataSet OnSelectRequest(string query, string tableName)
@@ -166,6 +170,7 @@ public class Player : MonoBehaviour
                     }
                     IncreaseScore(wave);
                     //StartCoroutine("Delay", wave);
+                    playGame = false;
                 }
                 timer = 0;
                 stimList.Add(stim);

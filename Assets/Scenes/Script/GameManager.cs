@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     //public int scoreThreshold = 2000;
 
     //public Text[] scoreData;
+    public bool gameEnd;
+    public bool playGame;
 
     void Update()
     {
@@ -26,9 +28,10 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("FailScene");
         } */
         int score = Score.curScore;
-        bool gameEnd = Player.gameEnd;
+        gameEnd = Player.gameEnd;
+        playGame = Player.playGame;
 
-        if (gameEnd == true)
+        if ((gameEnd == true) && (playGame == false))
         {
             // UnityEngine.Debug.Log("score: " + score + ", gameEnd: " + gameEnd);
             if (score < 100)
