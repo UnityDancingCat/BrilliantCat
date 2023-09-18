@@ -87,22 +87,22 @@ public class PlayerForTutorial : MonoBehaviour
     {
         if (wave == 0)
         {
-            Score.CatScore = Score.CatScore + 1;
+            Score.curScore = Score.curScore + 1;
             UnityEngine.Debug.Log("score update");
         }
         else if (wave == 1)
         {
-            Score.CatScore = Score.CatScore + 10;
+            Score.curScore = Score.curScore + 10;
             UnityEngine.Debug.Log("score update");
         }
         else if (wave == 2)
         {
-            Score.CatScore = Score.CatScore + 100;
+            Score.curScore = Score.curScore + 100;
             UnityEngine.Debug.Log("score update");
         }
         else if (wave == 3)
         {
-            Score.CatScore = Score.CatScore + 1000;
+            Score.curScore = Score.curScore + 1000;
             UnityEngine.Debug.Log("score update");
         }
     }

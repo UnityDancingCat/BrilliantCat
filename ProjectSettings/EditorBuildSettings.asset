@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
+    path: Assets/Scenes/Scene/StartScene.unity
     guid: 5a9b9b4364fd95b4f9745b46575d7774
   - enabled: 1
-    path: Assets/Scenes/TutorialScene.unity
+    path: Assets/Scenes/Scene/TutorialScene.unity
     guid: 2d61440d3fa38440381ffdac5d099910
   - enabled: 1
-    path: Assets/Scenes/Lev1Scene.unity
-    guid: 2b2cf50baec7ae84cbce739897035612
-  - enabled: 1
-    path: Assets/Scenes/FailScene.unity
+    path: Assets/Scenes/Scene/FailScene.unity
     guid: 0f5cc20ea63caaf48ada386f9dbb1904
   - enabled: 1
-    path: Assets/Scenes/SuccessScene.unity
+    path: Assets/Scenes/Scene/SuccessScene.unity
     guid: 1465eaba413f2ac48a1e5f60795e544c
   - enabled: 1
-    path: Assets/Scenes/Lev2Scene.unity
+    path: Assets/Scenes/Scene/Lev1Scene.unity
+    guid: 2b2cf50baec7ae84cbce739897035612
+  - enabled: 1
+    path: Assets/Scenes/Scene/Lev2Scene.unity
     guid: de2b5282c00468d48bc077e5f4bce2e4
   - enabled: 1
-    path: Assets/Scenes/Lev3Scene.unity
+    path: Assets/Scenes/Scene/Lev3Scene.unity
     guid: 0f02f5e1e54a6c344b959dad63c9e872
   - enabled: 1
-    path: Assets/Scenes/RankingScene.unity
+    path: Assets/Scenes/Scene/RankingScene.unity
     guid: 80facf03b59ccc64e8f23c8a23935445
   - enabled: 1
-    path: Assets/Scenes/LevSelecScene.unity
+    path: Assets/Scenes/Scene/LevSelecScene.unity
     guid: 909f0a2707a03e540b82bb90ed4f9ffb
   m_configObjects: {}

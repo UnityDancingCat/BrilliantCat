@@ -28,7 +28,7 @@ public class RankingUpdate : MonoBehaviour
     //public static Score instance;
 
     public string SceneName;
-    public int lev;
+    public static int lev;
 
     public static MySqlConnection SqlConn;
 
@@ -110,15 +110,15 @@ public class RankingUpdate : MonoBehaviour
     {
         SceneName = SquareImageWithOutline.sceneName;
 
-        if (sceneName == "Lev1Scene")
+        if (SceneName == "Lev1Scene")
         {
             lev = 1;
         }
-        else if (sceneName == "Lev2Scene")
+        else if (SceneName == "Lev2Scene")
         {
             lev = 2;
         }
-        else if (sceneName == "Lev3Scene")
+        else if (SceneName == "Lev3Scene")
         {
             lev = 3;
         }
@@ -129,7 +129,7 @@ public class RankingUpdate : MonoBehaviour
         DataSet ds = OnSelectRequest(query1, "ranking");
 
         int i = 0;
-        ScoreCur = Score.CatScore;
+        // ScoreCur = Score.curScore;
         foreach (DataRow r in ds.Tables[0].Rows)
             {
                 NameDB.Add((string)(r["user_name"]));
@@ -155,8 +155,8 @@ public class RankingUpdate : MonoBehaviour
     void Start()
     {
         select();
-        // ScoreCur = Score.CatScore;
-        ScoreCur = 0;
+        ScoreCur = Score.curScore;
+        // ScoreCur = 10;
 
         NameDB.Add(NameCur);
         ScoreDB.Add(ScoreCur);

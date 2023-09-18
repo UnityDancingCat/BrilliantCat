@@ -1687,8 +1687,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5096310921358579189}
   - component: {fileID: 1178138926497943439}
-  - component: {fileID: 2374398883305268088}
-  - component: {fileID: 7029631866405079192}
   m_Layer: 0
   m_Name: Chibi_Cat_06
   m_TagString: Untagged
@@ -1711,7 +1709,7 @@ Transform:
   - {fileID: 216196589354524553}
   - {fileID: 8980654342918315617}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1178138926497943439
 Animator:
@@ -1734,30 +1732,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2374398883305268088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5616669764911222607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c75caa194471ce47a0501e6b7e3a8fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7029631866405079192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5616669764911222607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c9864e6f7eba084089942cf8d789817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5706263719673458923
 GameObject:
   m_ObjectHideFlags: 0

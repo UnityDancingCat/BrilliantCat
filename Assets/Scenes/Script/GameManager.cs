@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("FailScene");
         } */
-        int score = Score.CatScore;
+        int score = Score.curScore;
         bool gameEnd = Player.gameEnd;
 
         if (gameEnd == true)
         {
             // UnityEngine.Debug.Log("score: " + score + ", gameEnd: " + gameEnd);
-            if (score > 100)
+            if (score < 100)
             {
                 SceneManager.LoadScene("FailScene", LoadSceneMode.Single);
             }
