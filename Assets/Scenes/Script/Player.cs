@@ -58,6 +58,35 @@ public class Player : MonoBehaviour
         
         gameEnd = false;
         playGame = true;
+
+        
+        try
+        {
+            SqlConn.Open();
+            UnityEngine.Debug.Log("sql connect");
+
+            string queryInsert = string.Format("insert into predictedClass (class) values (9999)");
+            MySqlCommand cmd = new MySqlCommand(queryInsert, SqlConn);
+            
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                UnityEngine.Debug.Log("인서트 성공");
+            }
+            else
+            {
+                UnityEngine.Debug.Log("인서트 실패");
+            }
+            
+            //cmd.Connection = SqlConn;
+            //cmd.CommandText = "INSERT INTO predictedClass VALUES(0000-00-00 00:00:00, 9999)";
+            
+            SqlConn.Close();
+            SqlConn.Close();
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.Log("OnSelectRequest: On client connect exception" + e);
+        }
     }
 
     public static DataSet OnSelectRequest(string query, string tableName)
@@ -108,6 +137,10 @@ public class Player : MonoBehaviour
         {
             Score.curScore = Score.curScore + 1000;
             UnityEngine.Debug.Log("score update");
+        }
+        else
+        {
+            UnityEngine.Debug.Log("game");
         }
     }
 
