@@ -1,6 +1,4 @@
-# Project Title
-
-An SSVEP-Based Mobile BCI Game Application: Brilliant Cat
+# An SSVEP-Based Mobile BCI Game Application: Brilliant Cat
 
 ## Abstract
 
