@@ -8,4 +8,5 @@ Brain-Computer Interface (BCI) technology, which interprets brainwaves to contro
 
 In this study, we develop an SSVEP-BCI system for frequency classification in brainwaves and propose a mobile BCI game application based on this system. The proposed BCI game distinguishes itself from previous research, mostly focused on PC-based development, by being designed for mobile applications. Through experiments, we verify the significance of BCI games as a novel paradigm and the convenience of mobile BCI games. We anticipate that further research in this area will contribute to the advancement of BCI games.
 
+
 <img src="https://github.com/woneunji/BrilliantCat/assets/78136893/4c8ef4f0-565a-45de-8694-c8221a95feb3">
