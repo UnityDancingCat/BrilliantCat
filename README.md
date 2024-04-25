@@ -1,4 +1,4 @@
-# An SSVEP-Based Mobile BCI Game Application: Brilliant Cat
+# An SSVEP-Based Mobile BCI Game Application: <br>Brilliant Cat
 
 Brain-Computer Interface (BCI) technology, which interprets brainwaves to control machines, is increasingly being recognized as a versatile tool in the realm of next-generation interfaces. Particularly, BCI games have garnered attention as a technology for individuals with disabilities and as a segment within the gaming industry for the general populace. Steady State Evoked Potential (SSVEP) stands out in BCI game research due to its reliance on brainwave responses to visual stimuli, offering high information transfer rates and good performance within BCI systems without extensive pre-training requirements.
 <br><br>
